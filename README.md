@@ -87,7 +87,7 @@ The linear regression model was able to account for about 57% of the variation i
 
 A random forest regression model was fit on the training data and then tested on the reserved testing data. 
 
-The random forest regression model was able to account for about 60% of the variation in the testing data (coefficient of determination / R2). In monetary terms, the model was able to predict the sales amount within a range of +/-800 rupees from the actual sales amount on the testing data (mean absolute error). 
+The random forest regression model was able to account for about 60% of the variation in the testing data (coefficient of determination / R2). In monetary terms, the model was able to predict the sales amount within a range of +/-728 rupees from the actual sales amount on the testing data (mean absolute error). 
 
 # **Final Recommendation**
 
