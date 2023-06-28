@@ -83,11 +83,33 @@ A linear regression model was fit on the training data and then tested on the re
 
 The linear regression model was able to account for about 57% of the variation in the testing data (coefficient of determination / R2). In monetary terms, the model was able to predict the sales amount within a range of +/-804 rupees from the actual sales amount on the testing data (mean absolute error). 
 
+![image](https://github.com/kellianneyang/food-sales-predictions-project/blob/main/Images/linear_regression_top_3_coefficients.png)
+
+The three largest coefficients plotted above are all one-hot encoded categorical features. This means their coefficients can be interpreted as how much the target changes if the observation belongs to that category. For the three categories above (largest to smallest):
+
+If the observation belongs to 'Outlet_Type_Supermarket Type 1', then the target sales will increase by 1006.523 rupees.
+
+If the observation belongs to 'Outlet_Type_Supermarket Type 2', then the target sales will increase by 849.785 rupees.
+
+If the observation belongs to 'Outlet_Identifier_OUT027', then the target sales will increase by 849.785 rupees.
+
+
+
 # **Machine Learning Model 2: Random Forest Regression**
 
 A random forest regression model was fit on the training data and then tested on the reserved testing data. 
 
 The random forest regression model was able to account for about 60% of the variation in the testing data (coefficient of determination / R2). In monetary terms, the model was able to predict the sales amount within a range of +/-728 rupees from the actual sales amount on the testing data (mean absolute error). 
+
+![image](https://github.com/kellianneyang/food-sales-predictions-project/blob/main/Images/random_forest_regression_top_5_feature_importances.png)
+
+For an interpretation, we keep in mind that built-in feature importances are biased toward valuing features with high-cardinality (like 'Item_MRP') over others. We also don't know the relationship of the feature to the target unless we do more EDA or employ additional tools.
+
+With those caveats aside, we can see that the most important feature for our random forest regressor model is 'Item_MRP', with a feature importance of about 0.5. Because feature importances add up to 1, this means that the model heavily relied on 'Item_MRP' to make its decisions to split nodes (about half the time).
+
+Our other top features were 'Outlet_Type_Supermarket Type 1', 'Outlet_Identifier_OUT027', 'Outlet_Type_Supermarket Type 2', and 'Outlet_Establishment_Year'. Three of these four (all save 'Outlet_Establishment_Year') were in the top 3 largest coefficients for our linear regression model.
+
+
 
 # **Final Recommendation**
 
