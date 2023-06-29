@@ -109,6 +109,21 @@ With those caveats aside, we can see that the most important feature for our ran
 
 Our other top features were 'Outlet_Type_Supermarket Type 1', 'Outlet_Identifier_OUT027', 'Outlet_Type_Supermarket Type 2', and 'Outlet_Establishment_Year'. Three of these four (all save 'Outlet_Establishment_Year') were in the top 3 largest coefficients for our linear regression model.
 
+Here are the SHAP summary plots (bar and dot versions), which show the most important features to the model's prediction and a deeper dive into those features and how the values of those features are driving the model's predictions.
+
+![image](https://github.com/kellianneyang/food-sales-predictions-project/blob/main/Images/shap_rf_bar_summary_plot.png)
+
+The SHAP bar summary plot identified the same top five features that the random forest model relied on. 
+
+![image](https://github.com/kellianneyang/food-sales-predictions-project/blob/main/Images/shap_rf_dot_summary_plot.png)
+
+The top three most important features identified by the SHAP dot plot above are:
+
+1. **'Item_MRP':** High prices (identified in red) are driving the SHAP values for rows up, meaning that they are pushing up the total sales number in that row. The reverse is true for low prices (in blue). There looks to be a very orderly spread of high-, mid-, and low-value items directing the final sales.
+
+2. **'Outlet_Type_Supermarket Type1':** The rows that belong to this categorical variable (in red) all show up on the positive side, meaning they are driving up final sales numbers. The rows that belong to other values in this category contribute to lower final sales.
+
+3. **'Outlet_Identifier_OUT027':** This particular outlet, with rows identified in red, is associated with higher final sales. Other outlets have lower sales.
 
 
 # **Final Recommendation**
