@@ -111,11 +111,11 @@ Our other top features were 'Outlet_Type_Supermarket Type 1', 'Outlet_Identifier
 
 Here are the SHAP summary plots (bar and dot versions), which show the most important features to the model's prediction and a deeper dive into those features and how the values of those features are driving the model's predictions.
 
-![image]("Images/shap_rf_bar_summary_plot.png)
+![image](https://github.com/kellianneyang/food-sales-predictions-project/blob/main/Images/shap_rf_bar_summary_plot.png)
 
 The SHAP bar summary plot identified the same top five features that the random forest model relied on. 
 
-![image]("Images/shap_rf_dot_summary_plot.png")
+![image](https://github.com/kellianneyang/food-sales-predictions-project/blob/main/Images/shap_rf_dot_summary_plot.png)
 
 The top three most important features identified by the SHAP dot plot above are:
 
